@@ -38,6 +38,11 @@ Daniel FrostHeart \\
             xlabel = $x$,
             ylabel = {$d_{p}(x)$},
         ]
+        \draw[fill=gray!25,draw=gray!25] plot[smooth,samples=100,domain=100:300] (\x,{\x/100}) -- 
+        plot[smooth,samples=100,domain=300:100] (\x,{2-(2/(e^(0.00770163*\x-0.0701635)))});
+        \draw[fill=powderBlue!25,draw=gray!25] plot[smooth,samples=100,domain=100:200] (\x,{\x/100}) -- 
+        plot[smooth,samples=100,domain=200:300] (\x,{2}) -- 
+        plot[smooth,samples=100,domain=300:100] (\x,{2-(2/(e^(0.00770163*\x-0.0701635)))});
         \draw[dashed, draw = forestGreen](0,2)--(300,2);
         \draw[dashed, draw = forestGreen](100,0)--(100,3);
         \addplot [
@@ -114,6 +119,11 @@ Daniel FrostHeart \\
             xlabel = $x$,
             ylabel = $d_{e} (x)$,
         ]
+        \draw[fill=gray!25,draw=gray!25] plot[smooth,samples=100,domain=150:300] (\x,{\x/100}) -- 
+        plot[smooth,samples=100,domain=300:150] (\x,{2-(2/(e^(0.0160168*\x-1.01623692)))});
+        \draw[fill=powderBlue!25,draw=gray!25] plot[smooth,samples=100,domain=150:200] (\x,{\x/100}) -- 
+        plot[smooth,samples=100,domain=200:300] (\x,{2}) -- 
+        plot[smooth,samples=100,domain=300:150] (\x,{2-(2/(e^(0.0160168*\x-1.01623692)))});
         \draw[dashed, draw = forestGreen](0,2)--(300,2);
         \draw[dashed, draw = forestGreen](150,0)--(150,3);
         \addplot[
@@ -191,9 +201,10 @@ Daniel FrostHeart \\
             xlabel = $x$,
             ylabel = ${r_{p}}(x)$,
         ]
-        \draw[fill=gray!25,] plot[smooth,samples=100,domain=50:125] (\x,{\x/100}) -- 
+        \draw[fill=gray!25,draw=white!0] plot[smooth,samples=100,domain=50:125] (\x,{\x/100}) -- 
         plot[smooth,samples=100,domain=125:50] (\x,{0.7-((0.7)/(e^(0.04072764*\x-0.78361903))});
-        \draw[fill=powderBlue!25,] plot[smooth,samples=100,domain=50:125] (\x,{0.7}) -- 
+        \draw[fill=powderBlue!25,draw=gray!25] plot[smooth,samples=100,domain=50:75] (\x,{\x/100}) -- 
+        plot[smooth,samples=100,domain=70:125] (\x,{0.7}) -- 
         plot[smooth,samples=100,domain=125:50] (\x,{0.7-((0.7)/(e^(0.04072764*\x-0.78361903))});
         \draw[dashed, draw = forestGreen](0,0.7)--(125,0.7);
         \draw[dashed, draw = forestGreen](50,0)--(50,1.25);
